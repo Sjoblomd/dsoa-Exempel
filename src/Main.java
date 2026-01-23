@@ -34,22 +34,33 @@ public class Main {
                     bike.getStock(),
                     bike.getSpecsString());
         }
+while(true) {
 
-        System.out.printf("\nVilken cykel vill du köpa? (1-%d): ",
-                bikeShop.getBikeCount());
-        String bikeInput = textInput.nextLine();
+    System.out.printf("\nVilken cykel vill du köpa? (1-%d): ",
+            bikeShop.getBikeCount());
+    String bikeInput = textInput.nextLine();
 
-        try {
-            // Integer.parseInt(str) ändrar String till int
-            int chosenBike = Integer.parseInt(bikeInput)-1;
-            Bike bikeOwned = bikeShop.getBike(chosenBike);
-            System.out.printf("Grattis, du äger nu cykel %s\n", bikeOwned.getName());
+    if(bikeInput.equalsIgnoreCase("q")) {
+        System.out.println("Thx, Welcome back! ");
+        System.exit(0);
+    }
 
-        } catch (NumberFormatException e) {
-            System.out.println("Du måste ge ett heltal!");
-        }
+    try {
+        // Integer.parseInt(str) ändrar String till int
+        int chosenBike = Integer.parseInt(bikeInput) - 1;
+        Bike bikeOwned = bikeShop.getBike(chosenBike);
+        System.out.printf("Grattis, du äger nu cykel %s\n", bikeOwned.getName());
+        break;
 
+    } catch (NumberFormatException e) {
+        System.out.println("Du måste ge ett heltal!");
+    } catch(IndexOutOfBoundsException e) {
+        System.out.println("Det finns ingen sådan cykel!");
+    } catch(Exception e) {
+        System.out.println("Someting went wrong. ");
+    }
 
+}
         // Code Challenge
         /*
         CC_Calculator calculator = new CC_Calculator();

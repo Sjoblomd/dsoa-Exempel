@@ -16,6 +16,8 @@ public class Bike extends Vehicle implements Shoppable {
         specs.put(key, value);
     }
 
+    private int stock;
+
     public String getSpecsString() {
         String ret = "";
         // for-each-loop
@@ -37,4 +39,10 @@ public class Bike extends Vehicle implements Shoppable {
     public int getStock() {
         return 0;
     }
+
+    @Override
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
 }
