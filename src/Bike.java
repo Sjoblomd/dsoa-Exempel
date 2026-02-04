@@ -1,6 +1,13 @@
+import java.io.Serializable;
 import java.util.HashMap;
 
-public class Bike extends Vehicle implements Shoppable {
+public class Bike extends Vehicle implements Shoppable, Serializable {
+
+    /**
+     * This is a bike class
+     */
+
+    private int stock = 0;
 
     private HashMap<String,String> specs = new HashMap<>();
 
@@ -16,8 +23,6 @@ public class Bike extends Vehicle implements Shoppable {
         specs.put(key, value);
     }
 
-    private int stock;
-
     public String getSpecsString() {
         String ret = "";
         // for-each-loop
@@ -30,6 +35,12 @@ public class Bike extends Vehicle implements Shoppable {
         return ret;
     }
 
+    /* flyttad till BikeFactory
+    public static Bike createRandomBike() {
+        return new Bike("aasdasd", 12123);
+    }
+    */
+
     @Override
     public String soundWarning() {
         return "pling-pling";
@@ -37,12 +48,13 @@ public class Bike extends Vehicle implements Shoppable {
 
     @Override
     public int getStock() {
-        return 0;
+        return stock;
     }
 
     @Override
     public void setStock(int stock) {
         this.stock = stock;
     }
+
 
 }
