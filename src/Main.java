@@ -4,6 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+        System.out.println("Filens innehåll: " + FileUtils.readTextFile("HelloWorld.txt"));
+        FileUtils.writeTextFile("Hello World!", "HelloWorld.txt");
+
         Scanner textInput = new Scanner(System.in);
         /*
         System.out.print("Skriv någonting: ");
@@ -11,7 +14,7 @@ public class Main {
         System.out.printf("Du skrev: %s\n", str);
         */
 
-        BikeShop bikeShop = new BikeShop();
+        /*BikeShop bikeShop = new BikeShop();
         bikeShop.addBike(new Bike("Scott", 500));
         bikeShop.getBike(0).addSpec("wheel-size", "29 inch");
         bikeShop.getBike(0).addSpec("suspension", "hardtail");
