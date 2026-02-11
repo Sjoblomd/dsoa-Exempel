@@ -8,6 +8,7 @@ public class Bike extends Vehicle implements Shoppable, Serializable {
      */
 
     private int stock = 0;
+    DiscountCategory discountCat = DiscountCategory.NEW;
 
     private HashMap<String,String> specs = new HashMap<>();
 
@@ -56,5 +57,7 @@ public class Bike extends Vehicle implements Shoppable, Serializable {
         this.stock = stock;
     }
 
-
+    public DiscountCategory getDiscountCat() {
+        return discountCat;
+    }
 }

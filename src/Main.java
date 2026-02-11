@@ -36,7 +36,8 @@ public class Main {
                     i+1,
                     bike.getName(),
                     bike.getPrice(),
-                    bike.getStock());
+                    bike.getStock(),
+                    bike.getDiscountCat());
         }
 
         while (true) {
