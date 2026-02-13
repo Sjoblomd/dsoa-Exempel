@@ -103,9 +103,17 @@ public class Main {
                 "Royal Enfield Bullet"
         };
 
+        Queuey q = new Queuey();
+        q.enqueue("Smok");
+        q.enqueue("Jack");
+        q.enqueue("Smoug");
+        q.dequeue();
+        q.enqueue("Dogge");
+        System.out.println(q);
+
         String[] weekDays = {"må", "ti", "on", "to", "fr", "lö", "sö"};
 
-        int today = 1;
+        int today = 5;
 
         System.out.printf("Idag är det %s%n", weekDays[today]);
         System.out.printf("I övermorgon är det %s%n", weekDays[(today + 2) % weekDays.length]);
