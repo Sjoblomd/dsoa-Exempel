@@ -169,5 +169,20 @@ public class Main {
         System.out.println(names.toString());
 
         new BigO();
+
+
+        //Grafstructur
+        Graphy graphy = new Graphy();
+        graphy.addNode("t1");
+        graphy.addNode("t2");
+        graphy.addNode("t3");
+        graphy.addNode("t4");
+
+        graphy.addEdge("t1", "t3");
+        graphy.addEdge("t1", "t4");
+        graphy.addEdge("t2", "t4");
+        graphy.addEdge("t3", "t4");
+
+        System.out.println(graphy);
     }
 }
